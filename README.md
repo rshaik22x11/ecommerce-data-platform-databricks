@@ -95,7 +95,3 @@ The platform supports **both batch and incremental ingestion**, CDC-style upsert
 - CI/CD integration
 - Cost-based optimization automation
 
----
-
-## Author
-Built as a job-ready data engineering portfolio project.
