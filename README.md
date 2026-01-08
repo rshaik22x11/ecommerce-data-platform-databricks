@@ -11,11 +11,15 @@ The platform supports **both batch and incremental ingestion**, CDC-style upsert
 
 ### Bronze Layer (Raw Ingestion)
 - Ingests raw CSV datasets into Delta tables
-- Supports **both batch and incremental ingestion**:
-  - Incremental ingestion using **Databricks Auto Loader** for transactional datasets
+- Supports both batch and incremental ingestion:
+  - Incremental ingestion using Databricks Auto Loader for transactional datasets
   - Batch ingestion for reference and lookup datasets
-- Handles schema evolution and rescued data for incremental pipelines
+- Handles schema evolution and rescued data
 - Append-only raw Delta tables preserving source fidelity
+
+> **Note:** All transactional datasets follow the same Bronze ingestion pattern.
+> This repository includes one representative Auto Loader pipeline to demonstrate
+> the approach without duplicating boilerplate code.
 
 
 ### Silver Layer (Trusted Data)
