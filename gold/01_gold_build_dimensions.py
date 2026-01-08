@@ -62,9 +62,9 @@ dim_seller = (
 
 dim_seller.write.mode("overwrite").format("delta").saveAsTable("gold.dim_seller")
 
-# -----------------------
+# ------------------------
 # Date Dimension
-# -----------------------
+# ------------------------
 date_df = (
     spark.table("silver_olist_orders")
     .select(to_date("order_purchase_timestamp").alias("date"))
